@@ -50,12 +50,11 @@ SELECT name, dept FROM employees;
 --TCL : Transaction Control Language--
 BEGIN TRANSACTION;
 
-INSERT INTO Employees VALUES (1, 'Alpha', 'HR', 50000);
-INSERT INTO Employees VALUES (2, 'Beta', 'DS', 60000);
+INSERT INTO Employees VALUES (99, 'Alpha', 'HR', 50000);
+INSERT INTO Employees VALUES (100, 'Beta', 'DS', 60000);
 
 -- Check current data
 SELECT * FROM Employees;
-
+-- To rollback to previous versions
 ROLLBACK;
-
 
