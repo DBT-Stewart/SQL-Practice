@@ -18,7 +18,7 @@ FROM departments d
 LEFT JOIN employees e ON d.id = e.dept_id
 GROUP BY d.dept_name;
 
--- 6. To find the tgotal budget per department.
+-- 6. To find the total budget per department.
 SELECT d.dept_name, SUM(p.budget) AS TotalBudget
 FROM departments d
 JOIN projects p ON d.id = p.dept_id
