@@ -122,7 +122,7 @@ SELECT d.dept_name
 FROM departments d
 WHERE EXISTS (SELECT 1 FROM employees e WHERE e.dept_id = d.id);
 
---Practice--
+--5. Set Operators--
 -- List the names of all employees and the names of all projects in a single result set (union of names).
 SELECT name AS ItemName
 FROM employees
