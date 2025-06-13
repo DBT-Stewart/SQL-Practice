@@ -32,3 +32,10 @@ WHERE id NOT IN (SELECT DISTINCT dept_id FROM employees WHERE dept_id IS NOT NUL
 SELECT d.dept_name
 FROM departments d
 WHERE EXISTS (SELECT 1 FROM employees e WHERE e.dept_id = d.id);
+
+-- practice --
+select id, name, dept_id from employees
+where id = (select id from employees where name = 'Bob');
+
+select id, name, dept_id from employees
+where dept_id in (select dept_id from departments where dept_name in ('Finance','It'));
